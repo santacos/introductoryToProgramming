@@ -8,16 +8,16 @@ public class Main {
 	// write your code here
         //print Triangle exercise
         System.out.println("----------Easiest exercise ever--------------");
-        System.out.println(Triangle.easiestExercise());
+        System.out.println(Line.generateOneStar());
 
         System.out.println("----------Draw a horizontal line-------------");
-        System.out.println(Triangle.drawHorizontalLine(8));
+        System.out.println(Line.generateHorizontalLine(8));
 
         System.out.println("----------Draw a vertical line---------------");
-        System.out.println(Triangle.drawVerticalLine(3));
+        System.out.println(Line.generateVerticalLine(3));
 
         System.out.println("----------Draw a right line------------------");
-        System.out.println(Triangle.drawARightTriangle(3));
+        System.out.println(Triangle.generateARightTriangle(3));
 
         //Diamond Exercises
         System.out.println("----------Isosceles Triangle-----------------");
@@ -31,14 +31,14 @@ public class Main {
 
         //FizzBuzz Exercises
         System.out.println("----------FizzBuzz---------------------------");
-        FizzBuzzGenerator.printFizzBuzz(15);
+        FizzBuzzGenerator.generateListOfFizzBuzz(15);
 
         //Prime Factors Exercise
         System.out.println("----------Prime Factors----------------------");
         int number = 30;
         System.out.println("Number: " + number);
         System.out.print("Prime factors: ");
-        Set<Integer> primeFactors = PrimeFoctor.generate(number);
+        Set<Integer> primeFactors = PrimeFactorGenerator.generate(number);
         for(Integer prime: primeFactors){
             System.out.print(prime+" ");
         }

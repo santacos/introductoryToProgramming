@@ -5,33 +5,10 @@ package com.exercise;
  */
 public class Triangle {
 
-    public static String easiestExercise() {
-        return "*";
-    }
-
-    public static String drawHorizontalLine(int n) {
-        String result = "";
-        for(int i = 0; i < n; i++){
-            result += "*";
-        }
-        return result;
-    }
-
-    public static String drawVerticalLine(int n) {
-        String result = "";
-        for(int i = 0; i < n; i++){
-            if(i < n-1)
-                result += "*\n";
-            else
-                result += "*";
-        }
-        return result;
-    }
-
-    public static String drawARightTriangle(int n) {
+    public static String generateARightTriangle(int n) {
         String result = "";
         for(int line = 1;line <= n; line++){
-            result += drawHorizontalLine(line);
+            result += Line.generateHorizontalLine(line);
             if(line < n) result += "\n";
         }
         return result;
