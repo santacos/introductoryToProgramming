@@ -17,16 +17,16 @@ public class PrimeFactorGenerator {
     }
 
     public static Set<Integer> generate(int number) {
-        Set<Integer> primefactors = new HashSet<>();
+        Set<Integer> primeFactors = new HashSet<>();
         int copyOfNumber = number;
 
         for (int i = 2; i <= copyOfNumber; i++) {
             if (copyOfNumber % i == 0) {
-                primefactors.add(i);
+                primeFactors.add(i);
                 copyOfNumber = copyOfNumber/i;
                 i--;
             }
         }
-        return primefactors;
+        return primeFactors;
     }
 }

@@ -9,19 +9,19 @@ import static org.testng.Assert.*;
  */
 public class FizzBuzzGeneratorTest {
     @Test
-    public void should_generate_Fizz_when_input_is_divisible_by_three(){
+    public void should_generate_Fizz_when_input_isDivisibleBy_three(){
         assertEquals(FizzBuzzGenerator.generate(3), "Fizz", "It should generate Fizz when input is 3");
         assertEquals(FizzBuzzGenerator.generate(6), "Fizz", "It should generate Fizz when input is 6");
     }
 
     @Test
-    public void should_generate_Buzz_when_input_is_divisible_by_five(){
+    public void should_generate_Buzz_when_input_isDivisibleBy_five(){
         assertEquals(FizzBuzzGenerator.generate(5), "Buzz", "It should generate Buzz when input is 5");
         assertEquals(FizzBuzzGenerator.generate(10), "Buzz", "It should generate Buzz when input is 10");
     }
 
     @Test
-    public void should_generate_FizzBuzz_when_input_is_divisible_by_fifteen(){
+    public void should_generate_FizzBuzz_when_input_isDivisibleBy_fifteen(){
         assertEquals(FizzBuzzGenerator.generate(15), "FizzBuzz", "It should generate FizzBuzz when input is 15");
         assertEquals(FizzBuzzGenerator.generate(30), "FizzBuzz", "It should generate FizzBuzz when input is 30");
     }
@@ -50,7 +50,6 @@ public class FizzBuzzGeneratorTest {
                         "13\n" +
                         "14\n" +
                         "FizzBuzz";
-
 
         assertEquals(FizzBuzzGenerator.generateListOfFizzBuzz(15), expect,
                 "It should generate FizzBuzz number for every numbers from 1 to 15");

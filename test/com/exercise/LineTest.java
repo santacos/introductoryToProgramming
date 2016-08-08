@@ -12,31 +12,36 @@ public class LineTest {
 
     @Test
     public void should_generate_one_star(){
-        String result = Line.generateOneStar();
-
-        assertEquals(result, "*", "result should be *");
+        assertEquals(Line.generateOneStar(), "*",
+                "method generateOneStar() should generate *");
     }
 
     @Test
-    public void testDrawHorizontalLineWithLength(){
-        assertEquals(Line.generateHorizontalLine(8), "********", "result should be");
+    public void should_generate_emptyString_when_generate_horizontal_line_withHeightIsZero(){
+        assertEquals(Line.generateHorizontalLine(0), "",
+                "Horizontal Line with height of zero should be empty string");
     }
 
     @Test
-    public void testDrawVerticalLineWithZeroLength(){
-        assertEquals(Line.generateVerticalLine(0), "", "result should be");
+    public void should_generate_horizontal_line_withLengthOfEight_when_input_is_eight(){
+        assertEquals(Line.generateHorizontalLine(8), "********",
+                "Horizontal line with length more than zero should have expected length");
     }
 
     @Test
-    public void testDrawVerticalLineWithLength(){
+    public void should_generate_emptyString_when_generate_vertical_line_withLengthIsZero(){
+        assertEquals(Line.generateVerticalLine(0), "",
+                "Vertical Line with height of zero should be empty string");
+    }
+
+    @Test
+    public void should_generate_vertical_line_withHeightMoreThanZero_when_input_is_more_than_zero(){
         String expect = "*\n" +
                         "*\n" +
                         "*";
-        assertEquals(Line.generateVerticalLine(3), expect, "result should be");
+        assertEquals(Line.generateVerticalLine(3), expect,
+                "Vertical Line with height more than zero should have expected height");
     }
 
-    @Test
-    public void testDrawHorizontalLineWithZeroLength(){
-        assertEquals(Line.generateHorizontalLine(0), "", "result should be");
-    }
+
 }

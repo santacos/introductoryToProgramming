@@ -21,13 +21,13 @@ public class Main {
 
         //Diamond Exercises
         System.out.println("----------Isosceles Triangle-----------------");
-        System.out.println(Diamond.drawIsoscelesTriangle(3));
+        System.out.println(Triangle.generateIsoscelesTriangle(3));
 
         System.out.println("----------Diamond----------------------------");
-        System.out.println(Diamond.drawDiamond(3));
+        System.out.println(Diamond.generateDiamond(3));
 
         System.out.println("----------Diamond with Name------------------");
-        System.out.println(Diamond.drawDiamondWithName("COS", 3));
+        System.out.println(Diamond.generateDiamondWithName("COS", 3));
 
         //FizzBuzz Exercises
         System.out.println("----------FizzBuzz---------------------------");

@@ -5,7 +5,7 @@ package com.exercise;
  */
 public class FizzBuzzGenerator {
 
-    public static String checkFizzBuzz(int number) {
+    public static String generate(int number) {
         String result = "";
         if(number % 3 == 0) result = "Fizz";
         if(number % 5 == 0) result += "Buzz";
@@ -13,9 +13,11 @@ public class FizzBuzzGenerator {
         return result;
     }
 
-    public static void printFizzBuzz(int limit){
-        for(int i=1; i <= limit; i++){
-            System.out.println(checkFizzBuzz(i));
+    public static String generateListOfFizzBuzz(int limitNumber) {
+        String result = "";
+        for(int i = 1; i <= limitNumber; i++){
+            result += generate(i) + "\n";
         }
+        return result.trim();
     }
 }

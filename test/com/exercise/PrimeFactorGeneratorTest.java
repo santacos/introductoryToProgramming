@@ -36,7 +36,7 @@ public class PrimeFactorGeneratorTest {
     }
 
     @Test
-    public void should_make_five_and_seven_as_prime_factor_Of_35(){
+    public void should_make_five_and_seven_as_prime_factor_Of_thirtyFive(){
         Set<Integer> expect = new HashSet<>();
         expect.addAll(Arrays.asList(7, 5));
         assertEquals(PrimeFactorGenerator.generate(35), expect, "35 should have 5,7 as prime factors");

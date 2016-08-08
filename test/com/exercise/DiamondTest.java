@@ -10,49 +10,36 @@ import static org.testng.Assert.*;
 public class DiamondTest {
 
     @Test
-    public void testIsoscelesTriangleWithZeroLength(){
-        String expect = "";
-        assertEquals(Diamond.drawIsoscelesTriangle(0),expect);
+    public void should_generate_emptyString_when_generate_diamond_withHeightOfZero(){
+        assertEquals(Diamond.generateDiamond(0), "",
+                "Diamond with height of zero should be empty string");
     }
 
     @Test
-    public void testIsoscelesTriangle(){
-        String expect = "  *\n" +
-                        " ***\n" +
-                        "*****";
-        assertEquals(Diamond.drawIsoscelesTriangle(3),expect);
-    }
-
-    @Test
-    public void testDiamondWithZeroLength(){
-        String expect = "";
-        assertEquals(Diamond.drawDiamond(0),expect);
-    }
-
-    @Test
-    public void testDiamond(){
+    public void should_generate_diamond_withLengthOfThree_when_input_is_three(){
         String expect = "  *\n" +
                         " ***\n" +
                         "*****\n" +
                         " ***\n" +
                         "  *";
-        assertEquals(Diamond.drawDiamond(3),expect);
+        assertEquals(Diamond.generateDiamond(3), expect);
     }
 
     @Test
-    public void testDiamondWithNameWithZeroLength(){
+    public void should_generate_emptyString_when_generate_diamond_with_name_withHeightOfZero(){
         String expect = "";
-        assertEquals(Diamond.drawDiamondWithName("", 0),expect);
+        assertEquals(Diamond.generateDiamondWithName("", 0), expect,
+                "Diamond with name with height of zero should be empty string");
     }
 
     @Test
-    public void testDiamondWithName(){
+    public void should_generate_diamondWithName_withLengthOfThree_when_input_is_three(){
         String expect = "  *\n" +
                         " ***\n" +
                         "COS\n" +
                         " ***\n" +
                         "  *";
-        assertEquals(Diamond.drawDiamondWithName("COS", 3),expect);
+        assertEquals(Diamond.generateDiamondWithName("COS", 3), expect);
     }
 
 
