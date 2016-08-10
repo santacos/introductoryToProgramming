@@ -3,11 +3,11 @@ package com.exercise;
 /**
  * Created by santacos on 8/5/2016 AD.
  */
-public class Diamond {
+public class DiamondGenerator {
 
     public static String generateDiamond(int n) {
         String result = "";
-        String upperTriangle = Triangle.generateIsoscelesTriangle(n);
+        String upperTriangle = TriangleGenerator.generateIsoscelesTriangle(n);
         String lowerTriangle = verticalFlipTriangle(upperTriangle, n - 1);
 
         if(n > 0) result = upperTriangle + "\n" + lowerTriangle;

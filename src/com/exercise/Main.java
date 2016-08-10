@@ -6,28 +6,28 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        //print Triangle exercise
+        //print TriangleGenerator exercise
         System.out.println("----------Easiest exercise ever--------------");
-        System.out.println(Line.generateOneStar());
+        System.out.println(LineGenerator.generateOneStar());
 
         System.out.println("----------Draw a horizontal line-------------");
-        System.out.println(Line.generateHorizontalLine(8));
+        System.out.println(LineGenerator.generateHorizontalLine(8));
 
         System.out.println("----------Draw a vertical line---------------");
-        System.out.println(Line.generateVerticalLine(3));
+        System.out.println(LineGenerator.generateVerticalLine(3));
 
         System.out.println("----------Draw a right line------------------");
-        System.out.println(Triangle.generateARightTriangle(3));
+        System.out.println(TriangleGenerator.generateARightTriangle(3));
 
-        //Diamond Exercises
-        System.out.println("----------Isosceles Triangle-----------------");
-        System.out.println(Triangle.generateIsoscelesTriangle(3));
+        //DiamondGenerator Exercises
+        System.out.println("----------Isosceles TriangleGenerator-----------------");
+        System.out.println(TriangleGenerator.generateIsoscelesTriangle(3));
 
-        System.out.println("----------Diamond----------------------------");
-        System.out.println(Diamond.generateDiamond(3));
+        System.out.println("----------DiamondGenerator----------------------------");
+        System.out.println(DiamondGenerator.generateDiamond(3));
 
-        System.out.println("----------Diamond with Name------------------");
-        System.out.println(Diamond.generateDiamondWithName("COS", 3));
+        System.out.println("----------DiamondGenerator with Name------------------");
+        System.out.println(DiamondGenerator.generateDiamondWithName("COS", 3));
 
         //FizzBuzz Exercises
         System.out.println("----------FizzBuzz---------------------------");

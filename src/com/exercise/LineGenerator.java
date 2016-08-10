@@ -3,17 +3,17 @@ package com.exercise;
 /**
  * Created by santacos on 8/8/2016 AD.
  */
-public class Line {
+public class LineGenerator {
 
     public static String generateOneStar() {
         return generateHorizontalLine(1);
     }
 
-    public static String generateHorizontalLine(int n) {
-        return drawString(n, false);
+    public static String generateHorizontalLine(int numberOfStars) {
+        return drawStars(numberOfStars, false);
     }
 
-    private static String drawString(int numberOfStars, boolean shouldHaveLineBreakBetweenEachStar){
+    private static String drawStars(int numberOfStars, boolean shouldHaveLineBreakBetweenEachStar){
         String result = "";
         for(int i = 0; i < numberOfStars; i++){
             result += "*";
@@ -23,7 +23,7 @@ public class Line {
     }
 
     public static String generateVerticalLine(int n) {
-        return drawString(n, true);
+        return drawStars(n, true);
     }
 
 

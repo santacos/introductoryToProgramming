@@ -4,11 +4,11 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
-public class TriangleTest {
+public class TriangleGeneratorTest {
 
     @Test
     public static void should_return_emptyString_when_generate_Isosceles_WithHeightOfZero(){
-        assertEquals(Triangle.generateIsoscelesTriangle(0), "",
+        assertEquals(TriangleGenerator.generateIsoscelesTriangle(0), "",
                 "method should generate empty string when length is 0");
     }
 
@@ -17,13 +17,13 @@ public class TriangleTest {
         String expect = "  *\n" +
                         " ***\n" +
                         "*****";
-        assertEquals(Triangle.generateIsoscelesTriangle(3), expect,
+        assertEquals(TriangleGenerator.generateIsoscelesTriangle(3), expect,
                 "It should generate a isosceles triangle with height of 3 when input is 3");
     }
 
     @Test
     public void should_return_empty_string_when_generate_aRightTriangle_withHeightOfZero(){
-        assertEquals(Triangle.generateARightTriangle(0), "",
+        assertEquals(TriangleGenerator.generateARightTriangle(0), "",
                 "method should generate empty string when input is 0");
     }
 
@@ -32,7 +32,7 @@ public class TriangleTest {
         String expect = "*\n"+
                         "**\n"+
                         "***";
-        assertEquals(Triangle.generateARightTriangle(3), expect,
+        assertEquals(TriangleGenerator.generateARightTriangle(3), expect,
                 "It should generate a right triangle with height of 3 when input is 3");
     }
 

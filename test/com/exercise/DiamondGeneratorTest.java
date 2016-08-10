@@ -7,12 +7,12 @@ import static org.testng.Assert.*;
 /**
  * Created by santacos on 8/5/2016 AD.
  */
-public class DiamondTest {
+public class DiamondGeneratorTest {
 
     @Test
     public void should_generate_emptyString_when_generate_diamond_withHeightOfZero(){
-        assertEquals(Diamond.generateDiamond(0), "",
-                "Diamond with height of zero should be empty string");
+        assertEquals(DiamondGenerator.generateDiamond(0), "",
+                "DiamondGenerator with height of zero should be empty string");
     }
 
     @Test
@@ -22,14 +22,14 @@ public class DiamondTest {
                         "*****\n" +
                         " ***\n" +
                         "  *";
-        assertEquals(Diamond.generateDiamond(3), expect);
+        assertEquals(DiamondGenerator.generateDiamond(3), expect);
     }
 
     @Test
     public void should_generate_emptyString_when_generate_diamond_with_name_withHeightOfZero(){
         String expect = "";
-        assertEquals(Diamond.generateDiamondWithName("", 0), expect,
-                "Diamond with name with height of zero should be empty string");
+        assertEquals(DiamondGenerator.generateDiamondWithName("", 0), expect,
+                "DiamondGenerator with name with height of zero should be empty string");
     }
 
     @Test
@@ -39,7 +39,7 @@ public class DiamondTest {
                         "COS\n" +
                         " ***\n" +
                         "  *";
-        assertEquals(Diamond.generateDiamondWithName("COS", 3), expect);
+        assertEquals(DiamondGenerator.generateDiamondWithName("COS", 3), expect);
     }
 
 
